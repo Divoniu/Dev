@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  border: 2px solid black;
+  margin: 3rem;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  overflow: hidden;
+}
+
+button {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.b1 {
+  animation-name: resize;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  transform-origin: center;
+}
+
+@keyframes resize {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(0.2, 0.2);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.b3 {
+}
+
+header {
+  display: flex;
+  background-color: aqua;
+  justify-content: center;
+}
+main {
+  display: flex;
+  flex-grow: 1;
+}
+
+.b3:focus {
+  animation-name: hide;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  transform-origin: center;
+}
+@keyframes hide {
+  0% {
+    transform: translateX(0);
+  }
+
+  80% {
+    transform: translateX(170px);
+  }
+  100% {
+    transform: translateX(150px);
+  }
+}
+
+.b2:focus {
+  animation-name: b2color;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  transform-origin: center;
+}
+
+@keyframes b2color {
+  0% {
+    transform: translateX(0);
+  }
+
+  80% {
+    transform: translateX(170px);
+  }
+  100% {
+    transform: translateX(150px);
+  }
+}
