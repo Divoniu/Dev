@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "hd hd hd hd"
+    "main main main main"
+    "main main main main"
+    "ft ft ft ft";
+  grid-template-rows: 1fr 2fr 3fr 1fr;
+  gap: 1em;
+}
+
+.main-header {
+  grid-area: hd;
+  display: grid;
+  grid-template-areas: "hd hd hd sn";
+}
+.main-header h2 {
+  grid-area: hd;
+}
+.main-header aside {
+  grid-area: sn;
+}
+footer {
+  grid-area: ft;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas:
+    "data data  data  data"
+    "data data data data"
+    "tab tab tab tab";
+}
+main table {
+  grid-area: tab;
+}
+
+table,
+th,
+td {
+  text-align: center;
+  border: 1px solid palevioletred;
+}
+
+.data-blocks {
+  grid-area: data;
+  display: grid;
+}
+
+.data-header {
+  grid-column: 1/5;
+  text-align: center;
+}
